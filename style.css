@@ -1,75 +1,154 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap");
+/* smooth scrolling ahead */
+html {
+  scroll-behavior: smooth;
+}
+
+/* nav button details */
+
+.nav-button {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border-radius: 7px;
+  background-color: #758190;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  box-shadow: 0 0 0 transparent;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.nav-button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 30px #4fa3e6;
+  transform: translateY(-2px);
+}
+
+.header-nav {
+  margin-left: auto;
+  margin-right: 1rem;
+}
 
 body {
-    font-family: 'Cabin';
-    background-color: #758190;
+  font-family: "Cabin";
+  background-color: #758190;
 }
 
 #tentacles {
-    width: 50px;
+  width: 50px;
 }
 
 .header {
-    display: flex;
-    background-color: lightblue;
-    padding: 1%;
-    align-items: center;
-    margin-left: -10px;
-    margin-right: -10px;
-    margin-top: -10px;
+  display: flex;
+  /* now a fallback background color */
+  background-color: lightblue;
+  /* smooth transition of color from navbar/header to body */
+  background-image: linear-gradient(to bottom, lightblue, #758190);
+  padding: 1%;
+  align-items: center;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-top: -10px;
 }
 
 .stats-container {
-    display: flex;
+  display: flex;
+  background-color: #758190;
+  display: flex;
+  align-items: space-between;
+}
+
+.stats-container:hover {
+  cursor: pointer;
+  /*  box-shadow: 0 0 30px lightblue;
+commenting this out to make the page look better */
 }
 
 .stats-card {
-    background-color: #a8b0bc;
-    border-radius: 7px;
-    padding: 1%;
-    margin: 1%;
-    width: 100%;
-    text-align: center;
+  background-color: #a8b0bc;
+  border-radius: 7px;
+  padding: 1%;
+  margin: 1%;
+  width: 100%;
+  text-align: center;
+  /* fancy smooth transition for hover effect */
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-#num-contributions, #total-raised, #num-games {
-    font-size: 50px;
+/* adding the hover effect to the individual cards instead of the whole container */
+.stats-card:hover {
+  cursor: pointer;
+  box-shadow: 0 0 30px lightblue;
+  /* hang on, we're going 3D pop-out mode */
+  transform: translateY(-3px);
+}
+
+#num-contributions,
+#total-raised,
+#num-games {
+  font-size: 50px;
 }
 
 #games-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .game-img {
-    width: 100%;
-    border-radius: 5px;
-    box-shadow: 0 0 10px #FFFFFF;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #ffffff;
 }
 
 .game-card {
-    background-color: #FFFFFF;
-    padding: 1%;
-    margin: 1%;
-    width: 300px;
-    text-align: center;
-    border-radius: 7px;
+  background-color: #ffffff;
+  padding: 1%;
+  margin: 1%;
+  width: 300px;
+  text-align: center;
+  border-radius: 7px;
+  /* fancy smooth transition for hover effect */
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .game-card:hover {
-    cursor: pointer;
-    box-shadow: 0 0 30px lightblue;
+  cursor: pointer;
+  box-shadow: 0 0 30px lightblue;
+  /* more 3D pop out on hover */
+  transform: translateY(-3px);
 }
 
 #button-container {
-    text-align: center;
+  text-align: center;
 }
 
 button {
-    font-family: 'Cabin';
-    border: none;
-    padding: 1%;
-    margin: 1%;
-    border-radius: 7px;
+  font-family: "Cabin";
+  border: none;
+  padding: 1%;
+  margin: 1%;
+  border-radius: 7px;
+  /* fancy smooth transition for hover effect */
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/* time to make the buttons stand out on hover */
+button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 30px #4fa3e6;
+  /* even more 3D pop out on hover */
+  transform: translateY(-3px);
+}
+
+/* search bar formatting */
+#search-container {
+  margin-bottom: 1rem;
+}
+
+/* making the search bar look better */
+#game-search {
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
